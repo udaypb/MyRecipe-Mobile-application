@@ -1,6 +1,8 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 
+import colors from "../config/colors";
+
 function WelcomeScreen(props) {
   return (
     <ImageBackground
@@ -13,7 +15,11 @@ function WelcomeScreen(props) {
           Food Recipies when you need them
         </Text>
       </View>
-      <View style={styles.loginButton}></View>
+      <View style={styles.loginButton}>
+        <Text style={{ color: colors.text1, fontWeight: "bold", fontSize: 20 }}>
+          Get Started
+        </Text>
+      </View>
     </ImageBackground>
   );
 }
@@ -25,9 +31,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   loginButton: {
-    backgroundColor: "teal",
+    backgroundColor: colors.primary,
     width: "100%",
     height: 80,
+    alignItems: "center",
+    padding: 20,
   },
   logo: {
     width: 100,
