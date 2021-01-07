@@ -1,6 +1,14 @@
 import React from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import {
+  Button,
+  Image,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
+import { AppButton } from "../components/AppButton";
 import colors from "../config/colors";
 
 function WelcomeScreen(props) {
@@ -15,10 +23,12 @@ function WelcomeScreen(props) {
           Food Recipies when you need them
         </Text>
       </View>
-      <View style={styles.loginButton}>
-        <Text style={{ color: colors.text1, fontWeight: "bold", fontSize: 20 }}>
-          Get Started
-        </Text>
+
+      <View style={styles.buttonContainer}>
+        <AppButton
+          title="Get Started"
+          onPress={() => console.log("lets start")}
+        ></AppButton>
       </View>
     </ImageBackground>
   );
@@ -46,6 +56,7 @@ const styles = StyleSheet.create({
     top: 80,
     alignItems: "center",
   },
+  buttonContainer: {},
 });
 
 export default WelcomeScreen;
